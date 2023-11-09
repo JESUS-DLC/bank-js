@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Banco</title>
+</head>
+
+<body>
+
+    <header id="header-bank">
+        <p class="welcome">Inicia sesión para comenzar</p>
+        <div>
+            <input class="bank-input" id="username" type="text" placeholder="usuario">
+            <input class="bank-input" id="pin" type="text" placeholder="nip">
+            <button id="login">Iniciar Sesión</button>
+        </div>
+    </header>
+
+    <main id="containerApp">
+        <section class="bank-container">
+
+            <div class="balance">
+                <div>
+                    <p class="balance__Label">Balance actual</p>
+                </div>
+                <p id="balance__value">$</p>
+            </div>
+
+            <div class="movements">
+            </div>
+
+            <div class="bank-operations bank-transfer">
+                <h3>Transferencia</h3>
+                <div class="bank-operations-container">
+                    <div class="bank-operations__input">
+                        <input type="text" id="input--to">
+                        <p>transferir a</p>
+                    </div>
+                    <div class="bank-operations__input">
+                        <input type="text" id="input--amount">
+                        <p>monto</p>
+                    </div>
+                    <button id="btn--transfer" class="bank-operations__button">Transferir</button>
+                </div>
+            </div>
+
+            <div class="bank-operations bank-loan">
+                <h3>Solicitar Préstamo</h3>
+                <div class="bank-operations-container">
+                    <div class="bank-operations__input">
+                        <input type="text" id="input--loan-amount">
+                        <p>Monto</p>
+                    </div>
+                    <button id="btn--loan" class="bank-operations__button">Solicitar</button>
+                </div>
+            </div>
+
+            <div class="bank-operations bank-close">
+                <h3>Cerrar Cuenta</h3>
+                <div class="bank-operations-container">
+                    <div class="bank-operations__input">
+                        <input type="text" id="input--user">
+                        <p>confirmar user</p>
+                    </div>
+                    <div class="bank-operations__input">
+                        <input type="text" id="input--pin">
+                        <p>confirmar pin</p>
+                    </div>
+                    <button id="btn--close" class="bank-operations__button">Cerrar</button>
+                </div>
+            </div>
+
+            <div class="summary">
+                <p class="sumary__label">entrada <span class="summary__value summary__value--in"></span></p>
+                <p class="sumary__label">salida <span class="summary__value summary__value--out"></span></p>
+                <p class="sumary__label">interés <span class="summary__value summary__value--interest"></span></p>
+                <p id="btn--sort" class="sumary__label">ordernar</p>
+            </div>
+
+            <div class="session">
+                <p class="sesssion__label">tu sesión se cerrará en  <span class="session__value">9:30</span></p>
+            </div>
+        </section>
+    </main>
+    <script src="bankist.js"></script>
+</body>
+
+</html>
